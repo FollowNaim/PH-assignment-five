@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            lexend: "Lexend, sans-serif",
+          },
+          extend: {
+            colors: {
+              primary: "#F9F7F3",
+              accents: "#B4F461",
+            },
+          },
+        },
+      };
+    </script>
+    <title>Donate Bangladesh</title>
+  </head>
+  <body class="font-lexend">
+    <header class="bg-primary px-4 pt-3 pb-5">
+      <nav class="container mx-auto flex justify-between items-center">
+        <button
+          class="btn text-base h-8 bg-accents text-black hover:bg-[#8bc73d] px-8 border-0"
+        >
+          Blog
+        </button>
+        <div class="flex items-center gap-3">
+          <img class="w-8" src="./assets/logo.png" alt="" />
+          <h1 class="font-semibold text-lg">Donate Bangladesh</h1>
+        </div>
+        <div class="flex items-center gap-3">
+          <img class="" src="./assets/coin.png" alt="" />
+          <div class="font-medium text-lg text-black/80">
+            <span class="mr-1">5500</span>
+            <span>BDT</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto px-4 pt-10">
+      <!-- Two Toggle Buttons -->
+    </main>
+  </body>
+</html>
