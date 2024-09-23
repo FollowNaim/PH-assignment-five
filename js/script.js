@@ -5,12 +5,22 @@ const donationContainer = document.getElementById("donation-container");
 const confirmationMessage = document.getElementById("confirmation-message");
 
 let track = false;
-btns.forEach((button) => {
-  button.addEventListener("click", (e) => {
+
+donationContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("addMoney")) {
+    const prevVal = e.target.previousElementSibling.value;
     const input = parseFloat(e.target.previousElementSibling.value);
     console.log(input);
-    if (typeof input !== "number" || isNaN(input) === true || input < 0) {
+    console.log(Number(prevVal.toString()));
+    if (
+      typeof input !== "number" ||
+      isNaN(input) === true ||
+      input <= 0 ||
+      input !== Number(prevVal.toString()) ||
+      input > Number(totalBalance.innerText)
+    ) {
       alert("not a number");
+      e.target.previousElementSibling.value = "";
       return;
     }
     historyAdd(e);
@@ -22,7 +32,7 @@ btns.forEach((button) => {
       updateMoney(e, "small-counter3");
     }
     confirmationMessage.showModal();
-  });
+  }
 });
 
 donationBtn.addEventListener("click", (e) => {
