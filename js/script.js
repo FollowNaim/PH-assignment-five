@@ -19,11 +19,12 @@ donationContainer.addEventListener("click", (e) => {
       input !== Number(prevVal.toString()) ||
       input > Number(totalBalance.innerText)
     ) {
-      alert("not a number");
+      alert("Please Type a Valid Number !!");
       e.target.previousElementSibling.value = "";
       return;
     }
     historyAdd(e);
+    confirmationMessage.showModal();
     if (e.target.classList.contains("btn1")) {
       updateMoney(e, "small-counter");
     } else if (e.target.classList.contains("btn2")) {
@@ -31,7 +32,6 @@ donationContainer.addEventListener("click", (e) => {
     } else {
       updateMoney(e, "small-counter3");
     }
-    confirmationMessage.showModal();
   }
 });
 
